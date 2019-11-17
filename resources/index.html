@@ -8,7 +8,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <meta charset="utf-8"/>
-    <title>Enot</title>
+    <title>Acs database</title>
+    <script src="main.js"></script>
 </head>
 <body>
 
@@ -29,11 +30,24 @@
 
         <!-- Button -->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="singlebutton">Single Button</label>
+            <label class="col-md-4 control-label" for="selectQueryBtn">Select query</label>
             <div class="col-md-4">
-                <button id="singlebutton" name="singlebutton" class="btn btn-primary">Button</button>
+                <button id="selectQueryBtn" name="selectQueryBtn" class="btn btn-primary" type="button">Select</button>
             </div>
         </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="selectQueryBtn">Select query</label>
+            <div class="col-md-4">
+                <button id="executeBtn" name="selectQueryBtn" class="btn btn-primary" type="button">Execute</button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-xs-12 control-label" id="resultLbl"></label>
+        </div>
+
+        <table id="queryResultTable" border="1">
+        </table>
 
     </fieldset>
 </form>

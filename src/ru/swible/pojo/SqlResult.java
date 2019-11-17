@@ -1,6 +1,6 @@
 package ru.swible.pojo;
 
-public class SqlExecuteResult {
+public class SqlResult {
     private boolean ok;
     private String errorText;
 

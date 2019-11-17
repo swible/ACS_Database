@@ -75,7 +75,7 @@ public class App {
                                 ResultSetMetaData metaData = rs.getMetaData();
                                 int columnCount = metaData.getColumnCount();
                                 for (int i = 1; i <= columnCount; i++) {
-                                    colNames.add(metaData.getColumnName(i));
+                                    colNames.add(metaData.getColumnLabel(i));
                                 }
                                 haveMetadata.set(true);
                             }

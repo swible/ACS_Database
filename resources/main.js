@@ -1,18 +1,23 @@
 var selectBtn;
-var updateBtn;
+var executeBtn;
 var textInput;
 var resultLbl;
 var queryResultTable;
+var openDbAdminBtn;
+var DbAdminPathName = "/DbAdmin.html";
 
 window.addEventListener("load", init, false);
 
 function init() {
 
+    openDbAdminBtn = document.getElementById("dbAdminGui");
+    openDbAdminBtn.addEventListener("click",()=>openPage(DbAdminPathName));
+
     selectBtn = document.getElementById("selectQueryBtn");
     selectBtn.addEventListener("click",selectQuery);
 
-    updateBtn = document.getElementById("executeBtn");
-    updateBtn.addEventListener("click",executeQuery);
+    executeBtn = document.getElementById("executeBtn");
+    executeBtn.addEventListener("click",executeQuery);
 
     textInput = document.getElementById("textinput");
     resultLbl = document.getElementById("resultLbl");
@@ -81,3 +86,8 @@ function selectQuery() {
     };
     xhr.send(textInput.value);
 }
+
+function openPage(pathName){
+    location.assign(location.origin + pathName);
+}
+$(document).ready();

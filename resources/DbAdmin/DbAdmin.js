@@ -34,7 +34,7 @@ function executeQuery() {
     var url = "/sqlExecute";
     xhr.open("POST", url, true);
     // xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.onreadystatechange = function () {
+    xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
                 var json = JSON.parse(xhr.responseText);
@@ -58,7 +58,7 @@ function selectQuery() {
     var url = "/sqlSelect";
     xhr.open("POST", url, true);
     // xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.onreadystatechange = function () {
+    xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
                 var json = JSON.parse(xhr.responseText);

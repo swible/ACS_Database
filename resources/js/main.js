@@ -3,19 +3,10 @@ var executeBtn;
 var textInput;
 var resultLbl;
 var queryResultTable;
-var openDbAdminBtn;
-var openSqlQueryBtn;
-var DbAdminPathName = "/DbAdmin/";
-var sqlQueryPathName = "";
 
 window.addEventListener("load", init, false);
 
 function init() {
-
-    openDbAdminBtn = document.getElementById("dbAdminGui");
-    openSqlQueryBtn = document.getElementById("sqlQuery");
-    openDbAdminBtn.addEventListener("click",()=>openPage(DbAdminPathName));
-    openSqlQueryBtn.addEventListener("click",()=>openPage(sqlQueryPathName));
 
     selectBtn = document.getElementById("selectQueryBtn");
     selectBtn.addEventListener("click",selectQuery);
@@ -90,8 +81,3 @@ function selectQuery() {
     };
     xhr.send(textInput.value);
 }
-
-function openPage(pathName){
-    location.assign(location.origin + pathName);
-}
-$(document).ready();

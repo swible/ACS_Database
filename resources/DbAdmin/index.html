@@ -36,13 +36,16 @@
 </header>
 
 <form class="form-horizontal">
-    DbAdmin
+    <h1>DbAdmin</h1>
     <p></p>
-    DbAdmin
+    <h6>Выберите таблицу для работы</h6>
     <div class="form-row">
-
+        <span class="col-md-3">
+            <select class="form-control" name="table" id="table_select"></select>
+        </span>
     </div>
-    <p></p>
+
+
     <fieldset>
 
     </fieldset>
@@ -54,6 +57,17 @@
 
     <script src="/js/main.js"></script>
     <script src="/js/navigation.js"></script>
-    <script src="DbAdmin.js"></script>
+    <script src="/js/DbAdmin.js"></script>
+
+
+    <script name="tableListGeneration">
+        var list = document.getElementById('table_select'),
+      arr = [111, 222, 333, 444, 555],
+      item = document.createElement('option');
+    for (var i = 0; i < arr.length; i++) {
+      item.text = arr[i];
+      list.appendChild(item.cloneNode(true));
+    }
+    </script>
 </body>
 </html>
